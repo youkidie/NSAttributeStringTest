@@ -22,6 +22,9 @@
 		718400F12417252B00B2DE5E /* FontColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718400F02417252B00B2DE5E /* FontColorSet.swift */; };
 		718400F32417255600B2DE5E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718400F22417255600B2DE5E /* UIColor.swift */; };
 		718400F52417258500B2DE5E /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718400F42417258500B2DE5E /* UIFont.swift */; };
+		718400F724177FC900B2DE5E /* DramrollTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718400F624177FC900B2DE5E /* DramrollTestViewController.swift */; };
+		718400F924187C9C00B2DE5E /* TableDramrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718400F824187C9C00B2DE5E /* TableDramrollViewController.swift */; };
+		7184010124189BCA00B2DE5E /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 718400FF24189BCA00B2DE5E /* iCarousel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,11 @@
 		718400F02417252B00B2DE5E /* FontColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontColorSet.swift; sourceTree = "<group>"; };
 		718400F22417255600B2DE5E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		718400F42417258500B2DE5E /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		718400F624177FC900B2DE5E /* DramrollTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramrollTestViewController.swift; sourceTree = "<group>"; };
+		718400F824187C9C00B2DE5E /* TableDramrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDramrollViewController.swift; sourceTree = "<group>"; };
+		718400FE24189BC900B2DE5E /* NSAttributeStringTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributeStringTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		718400FF24189BCA00B2DE5E /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		7184010024189BCA00B2DE5E /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		C507A679924EE255F7A2E47A /* Pods-NSAttributeStringTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSAttributeStringTest.release.xcconfig"; path = "Target Support Files/Pods-NSAttributeStringTest/Pods-NSAttributeStringTest.release.xcconfig"; sourceTree = "<group>"; };
 		FA894D8D10E854F3D979D9DA /* Pods_NSAttributeStringTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSAttributeStringTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +87,8 @@
 		7119C01824171E660061D1A5 /* NSAttributeStringTest */ = {
 			isa = PBXGroup;
 			children = (
+				7184010024189BCA00B2DE5E /* iCarousel.h */,
+				718400FF24189BCA00B2DE5E /* iCarousel.m */,
 				7119C02F2417232E0061D1A5 /* Font */,
 				7119C01924171E660061D1A5 /* AppDelegate.swift */,
 				7119C01F24171E690061D1A5 /* Assets.xcassets */,
@@ -90,6 +100,9 @@
 				718400F02417252B00B2DE5E /* FontColorSet.swift */,
 				718400F22417255600B2DE5E /* UIColor.swift */,
 				718400F42417258500B2DE5E /* UIFont.swift */,
+				718400F624177FC900B2DE5E /* DramrollTestViewController.swift */,
+				718400F824187C9C00B2DE5E /* TableDramrollViewController.swift */,
+				718400FE24189BC900B2DE5E /* NSAttributeStringTest-Bridging-Header.h */,
 			);
 			path = NSAttributeStringTest;
 			sourceTree = "<group>";
@@ -157,6 +170,7 @@
 				TargetAttributes = {
 					7119C01524171E660061D1A5 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -243,12 +257,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7119C01A24171E660061D1A5 /* AppDelegate.swift in Sources */,
+				7184010124189BCA00B2DE5E /* iCarousel.m in Sources */,
 				718400F32417255600B2DE5E /* UIColor.swift in Sources */,
 				718400ED241724A600B2DE5E /* FontSet.swift in Sources */,
 				718400F52417258500B2DE5E /* UIFont.swift in Sources */,
 				718400EF241724E700B2DE5E /* FontDecoration.swift in Sources */,
 				7119C02E2417228B0061D1A5 /* LabelViewController.swift in Sources */,
+				718400F724177FC900B2DE5E /* DramrollTestViewController.swift in Sources */,
 				718400F12417252B00B2DE5E /* FontColorSet.swift in Sources */,
+				718400F924187C9C00B2DE5E /* TableDramrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,19 +402,22 @@
 			baseConfigurationReference = 5C7444EF61B0526506817006 /* Pods-NSAttributeStringTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NSAttributeStringTest/Preview Content\"";
-				DEVELOPMENT_TEAM = GXZA2XKGS8;
+				DEVELOPMENT_TEAM = URZ7MNQ7G9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NSAttributeStringTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.tolv.NSAttributeStringTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cocktail-make.uitest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NSAttributeStringTest/NSAttributeStringTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -406,19 +426,21 @@
 			baseConfigurationReference = C507A679924EE255F7A2E47A /* Pods-NSAttributeStringTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NSAttributeStringTest/Preview Content\"";
-				DEVELOPMENT_TEAM = GXZA2XKGS8;
+				DEVELOPMENT_TEAM = URZ7MNQ7G9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NSAttributeStringTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.tolv.NSAttributeStringTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cocktail-make.uitest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NSAttributeStringTest/NSAttributeStringTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

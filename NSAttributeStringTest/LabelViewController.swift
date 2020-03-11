@@ -24,6 +24,7 @@ class LabelViewController: UIViewController {
     var decorationButtons:[UIButton] = []
     var colorButtons:[UIButton] = []
     let textField = UITextField()
+//    let rotateButton = UIButton()
     
     var fontSet = FontSet.hiraginoKakuGoW8
     var fontDecoration = FontDecoration.color
@@ -36,6 +37,8 @@ class LabelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        
+        self.navigationItem.setRightBarButton(UIBarButtonItem(title: "dramroll", style: .plain, target: self, action: #selector(moveToDramroll)), animated: false)
 
         bgV.backgroundColor = .lightGray
         self.view.addSubview(bgV)
@@ -121,6 +124,10 @@ class LabelViewController: UIViewController {
             colorButtons.append(button)
             self.view.addSubview(button)
         }
+        
+//        rotateButton.backgroundColor = .red
+//        rotateButton.setTitle("Rotate", for: .normal)
+//        self.view.addSubview(rotateButton)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -128,7 +135,7 @@ class LabelViewController: UIViewController {
 
         bgV.snp.makeConstraints{make in
             make.top.equalToSuperview().offset(self.view.safeAreaInsets.top)
-            make.height.equalTo(155)
+            make.height.equalTo(250)
             make.left.equalToSuperview()
             make.right.equalToSuperview()
         }
@@ -220,6 +227,14 @@ class LabelViewController: UIViewController {
             }
         }
         
+//        rotateButton.snp.makeConstraints{make in
+//            if let bottomAnc = colorButtons.last?.snp.bottom {
+//                make.top.equalTo(bottomAnc).offset(5)
+//                make.size.equalTo(44)
+//                make.centerX.equalToSuperview()
+//            }
+//        }
+        
         setLabel()
     }
     
@@ -275,6 +290,15 @@ class LabelViewController: UIViewController {
             }
         }
         setLabel()
+    }
+    
+//    @objc private func rotateButtonTap(_ sender:UIButton) {
+//
+//    }
+    
+    @objc private func moveToDramroll() {
+        self.navigationController?.pushViewController(TableDramrollViewController(), animated: true)
+//        self.navigationController?.pushViewController(DramrollTestViewController(), animated: true)
     }
     
     private func setLabel() {
