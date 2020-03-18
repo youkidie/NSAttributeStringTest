@@ -25,6 +25,13 @@
 		718400F724177FC900B2DE5E /* DramrollTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718400F624177FC900B2DE5E /* DramrollTestViewController.swift */; };
 		718400F924187C9C00B2DE5E /* TableDramrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718400F824187C9C00B2DE5E /* TableDramrollViewController.swift */; };
 		7184010124189BCA00B2DE5E /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 718400FF24189BCA00B2DE5E /* iCarousel.m */; };
+		718401232421BEE900B2DE5E /* VideoFilterTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718401222421BEE800B2DE5E /* VideoFilterTestViewController.swift */; };
+		718401252421BF3500B2DE5E /* grant_porter--towers_of_pfeiffer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 718401242421BF3500B2DE5E /* grant_porter--towers_of_pfeiffer.mp4 */; };
+		718401272421BF6400B2DE5E /* VideoFilterExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718401262421BF6400B2DE5E /* VideoFilterExport.swift */; };
+		7184012A2421C36E00B2DE5E /* VideoFilterCompositionInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718401292421C36E00B2DE5E /* VideoFilterCompositionInstruction.swift */; };
+		7184012C2421CD0D00B2DE5E /* VideoFilterCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184012B2421CD0D00B2DE5E /* VideoFilterCompositor.swift */; };
+		719C01042421D81700531AA5 /* MoviePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C01032421D81700531AA5 /* MoviePlayerView.swift */; };
+		719C01062421F52400531AA5 /* RealtimeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C01052421F52400531AA5 /* RealtimeFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		718400FE24189BC900B2DE5E /* NSAttributeStringTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributeStringTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		718400FF24189BCA00B2DE5E /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		7184010024189BCA00B2DE5E /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		718401222421BEE800B2DE5E /* VideoFilterTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilterTestViewController.swift; sourceTree = "<group>"; };
+		718401242421BF3500B2DE5E /* grant_porter--towers_of_pfeiffer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "grant_porter--towers_of_pfeiffer.mp4"; sourceTree = "<group>"; };
+		718401262421BF6400B2DE5E /* VideoFilterExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilterExport.swift; sourceTree = "<group>"; };
+		718401292421C36E00B2DE5E /* VideoFilterCompositionInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilterCompositionInstruction.swift; sourceTree = "<group>"; };
+		7184012B2421CD0D00B2DE5E /* VideoFilterCompositor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilterCompositor.swift; sourceTree = "<group>"; };
+		719C01032421D81700531AA5 /* MoviePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerView.swift; sourceTree = "<group>"; };
+		719C01052421F52400531AA5 /* RealtimeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeFilterViewController.swift; sourceTree = "<group>"; };
 		C507A679924EE255F7A2E47A /* Pods-NSAttributeStringTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSAttributeStringTest.release.xcconfig"; path = "Target Support Files/Pods-NSAttributeStringTest/Pods-NSAttributeStringTest.release.xcconfig"; sourceTree = "<group>"; };
 		FA894D8D10E854F3D979D9DA /* Pods_NSAttributeStringTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSAttributeStringTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +101,7 @@
 		7119C01824171E660061D1A5 /* NSAttributeStringTest */ = {
 			isa = PBXGroup;
 			children = (
+				718401282421C35100B2DE5E /* VideoFilter */,
 				7184010024189BCA00B2DE5E /* iCarousel.h */,
 				718400FF24189BCA00B2DE5E /* iCarousel.m */,
 				7119C02F2417232E0061D1A5 /* Font */,
@@ -103,6 +118,9 @@
 				718400F624177FC900B2DE5E /* DramrollTestViewController.swift */,
 				718400F824187C9C00B2DE5E /* TableDramrollViewController.swift */,
 				718400FE24189BC900B2DE5E /* NSAttributeStringTest-Bridging-Header.h */,
+				718401222421BEE800B2DE5E /* VideoFilterTestViewController.swift */,
+				719C01032421D81700531AA5 /* MoviePlayerView.swift */,
+				719C01052421F52400531AA5 /* RealtimeFilterViewController.swift */,
 			);
 			path = NSAttributeStringTest;
 			sourceTree = "<group>";
@@ -117,6 +135,17 @@
 				7119C031241723500061D1A5 /* ロゴたいぷゴシック.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		718401282421C35100B2DE5E /* VideoFilter */ = {
+			isa = PBXGroup;
+			children = (
+				718401242421BF3500B2DE5E /* grant_porter--towers_of_pfeiffer.mp4 */,
+				718401262421BF6400B2DE5E /* VideoFilterExport.swift */,
+				718401292421C36E00B2DE5E /* VideoFilterCompositionInstruction.swift */,
+				7184012B2421CD0D00B2DE5E /* VideoFilterCompositor.swift */,
+			);
+			path = VideoFilter;
 			sourceTree = "<group>";
 		};
 		81919E1141CFFA3F726BC266 /* Frameworks */ = {
@@ -199,6 +228,7 @@
 			files = (
 				7119C02624171E690061D1A5 /* LaunchScreen.storyboard in Resources */,
 				7119C035241723510061D1A5 /* ラノベPOP.otf in Resources */,
+				718401252421BF3500B2DE5E /* grant_porter--towers_of_pfeiffer.mp4 in Resources */,
 				7119C02024171E690061D1A5 /* Assets.xcassets in Resources */,
 				7119C038241723510061D1A5 /* cinecaption226.ttf in Resources */,
 				7119C037241723510061D1A5 /* ヒラギノ角ゴシック W8.ttc in Resources */,
@@ -260,11 +290,17 @@
 				7184010124189BCA00B2DE5E /* iCarousel.m in Sources */,
 				718400F32417255600B2DE5E /* UIColor.swift in Sources */,
 				718400ED241724A600B2DE5E /* FontSet.swift in Sources */,
+				7184012C2421CD0D00B2DE5E /* VideoFilterCompositor.swift in Sources */,
+				7184012A2421C36E00B2DE5E /* VideoFilterCompositionInstruction.swift in Sources */,
 				718400F52417258500B2DE5E /* UIFont.swift in Sources */,
+				718401272421BF6400B2DE5E /* VideoFilterExport.swift in Sources */,
 				718400EF241724E700B2DE5E /* FontDecoration.swift in Sources */,
+				719C01062421F52400531AA5 /* RealtimeFilterViewController.swift in Sources */,
 				7119C02E2417228B0061D1A5 /* LabelViewController.swift in Sources */,
+				719C01042421D81700531AA5 /* MoviePlayerView.swift in Sources */,
 				718400F724177FC900B2DE5E /* DramrollTestViewController.swift in Sources */,
 				718400F12417252B00B2DE5E /* FontColorSet.swift in Sources */,
+				718401232421BEE900B2DE5E /* VideoFilterTestViewController.swift in Sources */,
 				718400F924187C9C00B2DE5E /* TableDramrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -387,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

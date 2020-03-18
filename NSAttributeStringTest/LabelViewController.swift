@@ -239,7 +239,7 @@ class LabelViewController: UIViewController {
     }
     
     @objc private func slider1DidChangeValue(_ sender:UISlider) {
-        stroke1 = round(sender.value*10)
+        stroke1 = round(sender.value*20)
         slider1ValueLabel.text = String(stroke1)
         setLabel()
     }
@@ -297,8 +297,9 @@ class LabelViewController: UIViewController {
 //    }
     
     @objc private func moveToDramroll() {
-        self.navigationController?.pushViewController(TableDramrollViewController(), animated: true)
-//        self.navigationController?.pushViewController(DramrollTestViewController(), animated: true)
+//        self.navigationController?.pushViewController(TableDramrollViewController(), animated: true)
+        self.navigationController?.pushViewController(VideoFilterTestViewController(), animated: true)
+//        self.navigationController?.pushViewController(RealtimeFilterViewController(), animated: true)
     }
     
     private func setLabel() {
@@ -366,14 +367,12 @@ class LabelViewController: UIViewController {
         
         self.label.layer.cornerRadius = 10.0 * (fontSize / 20)
         self.label.sizeToFit()
-//        self.label.frame.size = CGSize(width: self.label.frame.width + 10.0 * (fontSize / 20) * 2, height: self.label.frame.height * 8 / 5)
         self.label.snp.remakeConstraints{make in
             make.center.equalToSuperview()
             make.width.equalTo(self.label.frame.width + 10.0 * (fontSize / 20) * 2)
             make.height.equalTo(self.label.frame.height * 8 / 5)
         }
         self.label.textAlignment = .center
-//        self.doubleLabel.frame.size = self.label.frame.size
         self.doubleLabel.snp.remakeConstraints{make in
             make.center.equalTo(self.label.snp.center)
             make.size.equalTo(self.label.snp.size)
