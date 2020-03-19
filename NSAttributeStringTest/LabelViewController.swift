@@ -54,6 +54,7 @@ class LabelViewController: UIViewController {
         self.view.addSubview(textField)
         
         strokeSlider1.value = stroke1/10
+        strokeSlider1.maximumValue = 20.0
         strokeSlider1.addTarget(self, action: #selector(slider1DidChangeValue(_:)), for: .touchUpInside)
         self.view.addSubview(strokeSlider1)
         
@@ -63,6 +64,7 @@ class LabelViewController: UIViewController {
         self.view.addSubview(slider1ValueLabel)
         
         strokeSlider2.value = -stroke2/10
+        strokeSlider2.maximumValue = 20.0
         strokeSlider2.addTarget(self, action: #selector(slider2DidChangeValue(_:)), for: .touchUpInside)
         self.view.addSubview(strokeSlider2)
         
@@ -239,13 +241,13 @@ class LabelViewController: UIViewController {
     }
     
     @objc private func slider1DidChangeValue(_ sender:UISlider) {
-        stroke1 = round(sender.value*10)
+        stroke1 = round(sender.value)
         slider1ValueLabel.text = String(stroke1)
         setLabel()
     }
     
     @objc private func slider2DidChangeValue(_ sender:UISlider) {
-        stroke2 = -round(sender.value*10)
+        stroke2 = -round(sender.value)
         slider2ValueLabel.text = String(stroke2)
         setLabel()
     }
