@@ -32,6 +32,8 @@
 		7184012C2421CD0D00B2DE5E /* VideoFilterCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184012B2421CD0D00B2DE5E /* VideoFilterCompositor.swift */; };
 		719C01042421D81700531AA5 /* MoviePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C01032421D81700531AA5 /* MoviePlayerView.swift */; };
 		719C01062421F52400531AA5 /* RealtimeFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C01052421F52400531AA5 /* RealtimeFilterViewController.swift */; };
+		719C010824230BB800531AA5 /* SelectTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C010724230BB800531AA5 /* SelectTestViewController.swift */; };
+		719C010A24230C2700531AA5 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C010924230C2700531AA5 /* Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		7184012B2421CD0D00B2DE5E /* VideoFilterCompositor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilterCompositor.swift; sourceTree = "<group>"; };
 		719C01032421D81700531AA5 /* MoviePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerView.swift; sourceTree = "<group>"; };
 		719C01052421F52400531AA5 /* RealtimeFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeFilterViewController.swift; sourceTree = "<group>"; };
+		719C010724230BB800531AA5 /* SelectTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTestViewController.swift; sourceTree = "<group>"; };
+		719C010924230C2700531AA5 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		C507A679924EE255F7A2E47A /* Pods-NSAttributeStringTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSAttributeStringTest.release.xcconfig"; path = "Target Support Files/Pods-NSAttributeStringTest/Pods-NSAttributeStringTest.release.xcconfig"; sourceTree = "<group>"; };
 		FA894D8D10E854F3D979D9DA /* Pods_NSAttributeStringTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSAttributeStringTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +125,8 @@
 				718401222421BEE800B2DE5E /* VideoFilterTestViewController.swift */,
 				719C01032421D81700531AA5 /* MoviePlayerView.swift */,
 				719C01052421F52400531AA5 /* RealtimeFilterViewController.swift */,
+				719C010724230BB800531AA5 /* SelectTestViewController.swift */,
+				719C010924230C2700531AA5 /* Screen.swift */,
 			);
 			path = NSAttributeStringTest;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 				718400F32417255600B2DE5E /* UIColor.swift in Sources */,
 				718400ED241724A600B2DE5E /* FontSet.swift in Sources */,
 				7184012C2421CD0D00B2DE5E /* VideoFilterCompositor.swift in Sources */,
+				719C010A24230C2700531AA5 /* Screen.swift in Sources */,
 				7184012A2421C36E00B2DE5E /* VideoFilterCompositionInstruction.swift in Sources */,
 				718400F52417258500B2DE5E /* UIFont.swift in Sources */,
 				718401272421BF6400B2DE5E /* VideoFilterExport.swift in Sources */,
@@ -299,6 +306,7 @@
 				7119C02E2417228B0061D1A5 /* LabelViewController.swift in Sources */,
 				719C01042421D81700531AA5 /* MoviePlayerView.swift in Sources */,
 				718400F724177FC900B2DE5E /* DramrollTestViewController.swift in Sources */,
+				719C010824230BB800531AA5 /* SelectTestViewController.swift in Sources */,
 				718400F12417252B00B2DE5E /* FontColorSet.swift in Sources */,
 				718401232421BEE900B2DE5E /* VideoFilterTestViewController.swift in Sources */,
 				718400F924187C9C00B2DE5E /* TableDramrollViewController.swift in Sources */,

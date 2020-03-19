@@ -38,7 +38,7 @@ class LabelViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
-        self.navigationItem.setRightBarButton(UIBarButtonItem(title: "dramroll", style: .plain, target: self, action: #selector(moveToDramroll)), animated: false)
+//        self.navigationItem.setRightBarButton(UIBarButtonItem(title: "dramroll", style: .plain, target: self, action: #selector(moveToDramroll)), animated: false)
 
         bgV.backgroundColor = .lightGray
         self.view.addSubview(bgV)
@@ -295,12 +295,6 @@ class LabelViewController: UIViewController {
 //    @objc private func rotateButtonTap(_ sender:UIButton) {
 //
 //    }
-    
-    @objc private func moveToDramroll() {
-//        self.navigationController?.pushViewController(TableDramrollViewController(), animated: true)
-        self.navigationController?.pushViewController(VideoFilterTestViewController(), animated: true)
-//        self.navigationController?.pushViewController(RealtimeFilterViewController(), animated: true)
-    }
     
     private func setLabel() {
         let style = NSMutableParagraphStyle()
