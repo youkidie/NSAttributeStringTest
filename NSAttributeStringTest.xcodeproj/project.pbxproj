@@ -35,6 +35,9 @@
 		719C010824230BB800531AA5 /* SelectTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C010724230BB800531AA5 /* SelectTestViewController.swift */; };
 		719C010A24230C2700531AA5 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C010924230C2700531AA5 /* Screen.swift */; };
 		719C010D2423194400531AA5 /* VideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C010C2423194400531AA5 /* VideoFilter.swift */; };
+		719C01102429AF6D00531AA5 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C010F2429AF6D00531AA5 /* UITableViewCell.swift */; };
+		719C01122429AF8600531AA5 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C01112429AF8600531AA5 /* UITableView.swift */; };
+		719C01142429AFA600531AA5 /* UITableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C01132429AFA600531AA5 /* UITableViewHeaderFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		719C010724230BB800531AA5 /* SelectTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTestViewController.swift; sourceTree = "<group>"; };
 		719C010924230C2700531AA5 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		719C010C2423194400531AA5 /* VideoFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFilter.swift; sourceTree = "<group>"; };
+		719C010F2429AF6D00531AA5 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		719C01112429AF8600531AA5 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		719C01132429AFA600531AA5 /* UITableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterView.swift; sourceTree = "<group>"; };
 		C507A679924EE255F7A2E47A /* Pods-NSAttributeStringTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSAttributeStringTest.release.xcconfig"; path = "Target Support Files/Pods-NSAttributeStringTest/Pods-NSAttributeStringTest.release.xcconfig"; sourceTree = "<group>"; };
 		FA894D8D10E854F3D979D9DA /* Pods_NSAttributeStringTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSAttributeStringTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +113,7 @@
 		7119C01824171E660061D1A5 /* NSAttributeStringTest */ = {
 			isa = PBXGroup;
 			children = (
+				719C010E2429AF3D00531AA5 /* Extension */,
 				719C010B2423191600531AA5 /* Enum */,
 				718401282421C35100B2DE5E /* VideoFilter */,
 				7184010024189BCA00B2DE5E /* iCarousel.h */,
@@ -117,8 +124,6 @@
 				7119C02424171E690061D1A5 /* LaunchScreen.storyboard */,
 				7119C02724171E690061D1A5 /* Info.plist */,
 				7119C02D2417228B0061D1A5 /* LabelViewController.swift */,
-				718400F22417255600B2DE5E /* UIColor.swift */,
-				718400F42417258500B2DE5E /* UIFont.swift */,
 				718400F624177FC900B2DE5E /* DramrollTestViewController.swift */,
 				718400F824187C9C00B2DE5E /* TableDramrollViewController.swift */,
 				718400FE24189BC900B2DE5E /* NSAttributeStringTest-Bridging-Header.h */,
@@ -163,6 +168,18 @@
 				719C010C2423194400531AA5 /* VideoFilter.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		719C010E2429AF3D00531AA5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				718400F22417255600B2DE5E /* UIColor.swift */,
+				718400F42417258500B2DE5E /* UIFont.swift */,
+				719C010F2429AF6D00531AA5 /* UITableViewCell.swift */,
+				719C01112429AF8600531AA5 /* UITableView.swift */,
+				719C01132429AFA600531AA5 /* UITableViewHeaderFooterView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		81919E1141CFFA3F726BC266 /* Frameworks */ = {
@@ -308,6 +325,7 @@
 				718400F32417255600B2DE5E /* UIColor.swift in Sources */,
 				718400ED241724A600B2DE5E /* FontSet.swift in Sources */,
 				7184012C2421CD0D00B2DE5E /* VideoFilterCompositor.swift in Sources */,
+				719C01102429AF6D00531AA5 /* UITableViewCell.swift in Sources */,
 				719C010A24230C2700531AA5 /* Screen.swift in Sources */,
 				7184012A2421C36E00B2DE5E /* VideoFilterCompositionInstruction.swift in Sources */,
 				718400F52417258500B2DE5E /* UIFont.swift in Sources */,
@@ -316,12 +334,14 @@
 				719C01062421F52400531AA5 /* RealtimeFilterViewController.swift in Sources */,
 				7119C02E2417228B0061D1A5 /* LabelViewController.swift in Sources */,
 				719C010D2423194400531AA5 /* VideoFilter.swift in Sources */,
+				719C01142429AFA600531AA5 /* UITableViewHeaderFooterView.swift in Sources */,
 				719C01042421D81700531AA5 /* MoviePlayerView.swift in Sources */,
 				718400F724177FC900B2DE5E /* DramrollTestViewController.swift in Sources */,
 				719C010824230BB800531AA5 /* SelectTestViewController.swift in Sources */,
 				718400F12417252B00B2DE5E /* FontColorSet.swift in Sources */,
 				718401232421BEE900B2DE5E /* VideoFilterTestViewController.swift in Sources */,
 				718400F924187C9C00B2DE5E /* TableDramrollViewController.swift in Sources */,
+				719C01122429AF8600531AA5 /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

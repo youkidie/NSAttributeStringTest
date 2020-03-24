@@ -38,6 +38,7 @@ class LabelViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
 //        self.navigationItem.setRightBarButton(UIBarButtonItem(title: "dramroll", style: .plain, target: self, action: #selector(moveToDramroll)), animated: false)
 
         bgV.backgroundColor = .lightGray
@@ -331,18 +332,27 @@ class LabelViewController: UIViewController {
             self.doubleLabel.attributedText = attributedText2
             
         case .white:
-            self.doubleLabel.alpha = 0.0
-            
             let textAttributes: [NSAttributedString.Key : Any] = [
                 .font: UIFont(fontSet: fontSet, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize),
                 .paragraphStyle : style,
-                .foregroundColor : fontColor.insideColor,
-                .strokeColor : fontColor.uiColor,
+                .foregroundColor : fontColor.uiColor,
+                .strokeColor : fontColor.insideColor,
                 .strokeWidth : stroke1
             ]
             let attributedText = NSAttributedString(string: text, attributes: textAttributes)
-            
+
             self.label.attributedText = attributedText
+            
+            let textAttributes2: [NSAttributedString.Key : Any] = [
+                .font: UIFont(fontSet: fontSet, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize),
+                .paragraphStyle : style,
+                .foregroundColor : fontColor.uiColor,
+                .strokeColor : fontColor.uiColor,
+                .strokeWidth : stroke2
+            ]
+            let attributedText2 = NSAttributedString(string: text, attributes: textAttributes2)
+
+            self.doubleLabel.attributedText = attributedText2
         case .colorCushion:
             self.doubleLabel.alpha = 0.0
             
@@ -366,12 +376,18 @@ class LabelViewController: UIViewController {
             make.width.equalTo(self.label.frame.width + 10.0 * (fontSize / 20) * 2)
             make.height.equalTo(self.label.frame.height * 8 / 5)
         }
+        self.label.frame.size = CGSize(width: self.label.frame.width + 10.0 * (fontSize / 20) * 2, height: self.label.frame.height * 8 / 5)
         self.label.textAlignment = .center
+        
         self.doubleLabel.snp.remakeConstraints{make in
             make.center.equalTo(self.label.snp.center)
             make.size.equalTo(self.label.snp.size)
         }
+        self.doubleLabel.frame = self.label.frame
         self.doubleLabel.textAlignment = .center
+        
+//        print("label \(self.label.frame.origin.x)  \(self.label.frame.origin.y) \(self.label.frame.width) \(self.label.frame.height)")
+//        print("doublelabel \(self.doubleLabel.frame.origin.x)  \(self.doubleLabel.frame.origin.y) \(self.doubleLabel.frame.width) \(self.doubleLabel.frame.height)")
     }
 }
 
