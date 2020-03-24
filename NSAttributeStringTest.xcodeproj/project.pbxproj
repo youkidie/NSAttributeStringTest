@@ -481,6 +481,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"NSAttributeStringTest/Preview Content\"";
 				DEVELOPMENT_TEAM = URZ7MNQ7G9;
 				ENABLE_PREVIEWS = YES;
@@ -507,6 +508,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"NSAttributeStringTest/Preview Content\"";
 				DEVELOPMENT_TEAM = URZ7MNQ7G9;
 				ENABLE_PREVIEWS = YES;

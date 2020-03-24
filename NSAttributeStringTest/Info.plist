@@ -2,14 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>動画撮影の際の音声取得に使用します</string>
-	<key>NSCameraUsageDescription</key>
-	<string>写真を撮るのに使用します</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>動画の読み込み・書き出しを行います</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>フォトライブラリから画像や動画を読み込むのに使用します</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -25,9 +17,17 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>写真を撮るのに使用します</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>動画撮影の際の音声取得に使用します</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>フォトライブラリから画像や動画を読み込むのに使用します</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>動画の読み込み・書き出しを行います</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>rounded-mplus-1p-bold.ttf</string>
