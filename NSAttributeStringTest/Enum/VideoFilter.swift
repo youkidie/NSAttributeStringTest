@@ -346,157 +346,186 @@ extension VideoFilter {
 
 enum VideoFilterName: String {
     case CIBoxBlur
-    case CIDiscBlur
-    case CIGaussianBlur
-    case CIMedianFilter
-    case CIMotionBlur
-    case CINoiseReduction
-    case CIZoomBlur
-    case CIColorClamp
-    case CIColorControls
-    case CIColorMatrix
-    case CIColorPolynomial
-    case CIExposureAdjust
-    case CIGammaAdjust
-    case CIHueAdjust
-    case CILinearToSRGBToneCurve
-    case CISRGBToneCurveToLinear
-    case CITemperatureAndTint
-    case CIToneCurve
-    case CIVibrance
-    case CIWhitePointAdjust
-//    case CIColorCrossPolynomial
-    // use cube data
-//    case CIColorCube
-//    case CIColorCubeWithColorSpace
-    case CIColorInvert
-//    case CIColorMap
-    case CIColorMonochrome
-    case CIColorPosterize
-    case CIFalseColor
-    case CIMaskToAlpha
-    case CIMaximumComponent
-    case CIMinimumComponent
-    case CIPhotoEffectChrome
-    case CIPhotoEffectFade
-    case CIPhotoEffectInstant
-    case CIPhotoEffectMono
-    case CIPhotoEffectNoir
-    case CIPhotoEffectProcess
-    case CIPhotoEffectTonal
-    case CIPhotoEffectTransfer
-    case CISepiaTone
-    case CIVignette
-    case CIVignetteEffect
-    // mix2image
-//    case CIAdditionCompositing
-//    case CIColorBlendMode
-//    case CIColorBurnBlendMode
-//    case CIColorDodgeBlendMode
-//    case CIDarkenBlendMode
-//    case CIDifferenceBlendMode
-//    case CIDivideBlendMode
-//    case CIExclusionBlendMode
-//    case CIHardLightBlendMode
-//    case CIHueBlendMode
-//    case CILightenBlendMode
-//    case CILinearBurnBlendMode
-//    case CILinearDodgeBlendMode
-//    case CILuminosityBlendMode
-//    case CIMaximumCompositing
-//    case CIMinimumCompositing
-//    case CIMultiplyBlendMode
-//    case CIMultiplyCompositing
-//    case CIOverlayBlendMode
-//    case CIPinLightBlendMode
-//    case CISaturationBlendMode
-//    case CIScreenBlendMode
-//    case CISoftLightBlendMode
-//    case CISourceAtopCompositing
-//    case CISourceInCompositing
-//    case CISourceOutCompositing
-//    case CISourceOverCompositing
-//    case CISubtractBlendMode
-    case CIBumpDistortion
-    case CIBumpDistortionLinear
-    case CICircleSplashDistortion
-    case CICircularWrap
-    case CIDroste
-    // use texture
-//    case CIDisplacementDistortion
-//    case CIGlassDistortion
-    case CIGlassLozenge
-    case CIHoleDistortion
-    case CILightTunnel
-    case CIPinchDistortion
-    case CIStretchCrop
-    case CITorusLensDistortion
-    case CITwirlDistortion
-    case CIVortexDistortion
-    // remake generator
-//    case CIAztecCodeGenerator
-//    case CICheckerboardGenerator
-//    case CICode128BarcodeGenerator
-//    case CIConstantColorGenerator
-//    case CILenticularHaloGenerator
-//    case CIPDF417BarcodeGenerator
-//    case CIQRCodeGenerator
-    case CIRandomGenerator
-//    case CIStarShineGenerator
-//    case CIStripesGenerator
-//    case CISunbeamsGenerator
-    // scale transform
-//    case CIAffineTransform
-//    case CICrop
-//    case CILanczosScaleTransform
-    case CIPerspectiveCorrection
-    case CIPerspectiveTransform
-//    case CIPerspectiveTransformWithExtent
-    case CIStraightenFilter
-//    case CIGaussianGradient
-//    case CILinearGradient
-//    case CIRadialGradient
-//    case CISmoothLinearGradient
-//    case CICircularScreen
-    case CICMYKHalftone
-//    case CIDotScreen
-//    case CIHatchedScreen
-//    case CILineScreen
-    // ???
-//    case CIAreaAverage
-//    case CIAreaHistogram
-//    case CIRowAverage
-//    case CIColumnAverage
-//    case CIHistogramDisplayFilter
-//    case CIAreaMaximum
-//    case CIAreaMinimum
-//    case CIAreaMaximumAlpha
-//    case CIAreaMinimumAlpha
-    case CISharpenLuminance
-    case CIUnsharpMask
-//    case CIBlendWithAlphaMask
-//    case CIBlendWithMask
-    case CIBloom
-    case CIComicEffect
-//    case CIConvolution3X3
-//    case CIConvolution5X5
-//    case CIConvolution7X7
-//    case CIConvolution9Horizontal
-//    case CIConvolution9Vertical
-    case CICrystallize
-    case CIDepthOfField
-    case CIEdges
-    case CIEdgeWork
-    case CIGloom
-    case CIHeightFieldFromMask
-    case CIHexagonalPixellate
-    case CIHighlightShadowAdjust
-    case CILineOverlay
-    case CIPixellate
-    case CIPointillize
-//    case CIShadedMaterial
-//    case CISpotColor
-    case CISpotLight
+        case CIDiscBlur
+        case CIGaussianBlur
+        case CIMedianFilter
+        case CIMotionBlur
+        case CINoiseReduction
+        case CIZoomBlur
+        case CIColorClamp
+        case CIColorControls
+        case CIColorMatrix
+        case CIColorPolynomial
+        case CIExposureAdjust
+        case CIGammaAdjust
+        case CIHueAdjust
+        case CILinearToSRGBToneCurve
+        case CISRGBToneCurveToLinear
+        case CITemperatureAndTint
+        case CIToneCurve
+        case CIVibrance
+        case CIWhitePointAdjust
+    //    case CIColorCrossPolynomial
+        // use cube data
+    //    case CIColorCube
+    //    case CIColorCubeWithColorSpace
+        case CIColorInvert
+    //    case CIColorMap
+        case CIColorMonochrome
+        case CIColorPosterize
+        case CIFalseColor
+        case CIMaskToAlpha
+        case CIMaximumComponent
+        case CIMinimumComponent
+        case CIPhotoEffectChrome
+        case CIPhotoEffectFade
+        case CIPhotoEffectInstant
+        case CIPhotoEffectMono
+        case CIPhotoEffectNoir
+        case CIPhotoEffectProcess
+        case CIPhotoEffectTonal
+        case CIPhotoEffectTransfer
+        case CISepiaTone
+        case CIVignette
+        case CIVignetteEffect
+        // mix2image
+    //    case CIAdditionCompositing
+    //    case CIColorBlendMode
+    //    case CIColorBurnBlendMode
+    //    case CIColorDodgeBlendMode
+    //    case CIDarkenBlendMode
+    //    case CIDifferenceBlendMode
+    //    case CIDivideBlendMode
+    //    case CIExclusionBlendMode
+    //    case CIHardLightBlendMode
+    //    case CIHueBlendMode
+    //    case CILightenBlendMode
+    //    case CILinearBurnBlendMode
+    //    case CILinearDodgeBlendMode
+    //    case CILuminosityBlendMode
+    //    case CIMaximumCompositing
+    //    case CIMinimumCompositing
+    //    case CIMultiplyBlendMode
+    //    case CIMultiplyCompositing
+    //    case CIOverlayBlendMode
+    //    case CIPinLightBlendMode
+    //    case CISaturationBlendMode
+    //    case CIScreenBlendMode
+    //    case CISoftLightBlendMode
+    //    case CISourceAtopCompositing
+    //    case CISourceInCompositing
+    //    case CISourceOutCompositing
+    //    case CISourceOverCompositing
+    //    case CISubtractBlendMode
+        case CIBumpDistortion
+        case CIBumpDistortionLinear
+        case CICircleSplashDistortion
+        case CICircularWrap
+        case CIDroste
+        // use texture
+    //    case CIDisplacementDistortion
+    //    case CIGlassDistortion
+        case CIGlassLozenge
+        case CIHoleDistortion
+        case CILightTunnel
+        case CIPinchDistortion
+        case CIStretchCrop
+        case CITorusLensDistortion
+        case CITwirlDistortion
+        case CIVortexDistortion
+        // remake generator
+    //    case CIAztecCodeGenerator
+    //    case CICheckerboardGenerator
+    //    case CICode128BarcodeGenerator
+    //    case CIConstantColorGenerator
+    //    case CILenticularHaloGenerator
+    //    case CIPDF417BarcodeGenerator
+    //    case CIQRCodeGenerator
+        case CIRandomGenerator
+    //    case CIStarShineGenerator
+    //    case CIStripesGenerator
+    //    case CISunbeamsGenerator
+        // scale transform
+    //    case CIAffineTransform
+    //    case CICrop
+    //    case CILanczosScaleTransform
+        case CIPerspectiveCorrection
+        case CIPerspectiveTransform
+    //    case CIPerspectiveTransformWithExtent
+        case CIStraightenFilter
+    //    case CIGaussianGradient
+    //    case CILinearGradient
+    //    case CIRadialGradient
+    //    case CISmoothLinearGradient
+    //    case CICircularScreen
+        case CICMYKHalftone
+    //    case CIDotScreen
+    //    case CIHatchedScreen
+    //    case CILineScreen
+        // ???
+    //    case CIAreaAverage
+    //    case CIAreaHistogram
+    //    case CIRowAverage
+    //    case CIColumnAverage
+    //    case CIHistogramDisplayFilter
+    //    case CIAreaMaximum
+    //    case CIAreaMinimum
+    //    case CIAreaMaximumAlpha
+    //    case CIAreaMinimumAlpha
+        case CISharpenLuminance
+        case CIUnsharpMask
+    //    case CIBlendWithAlphaMask
+    //    case CIBlendWithMask
+        case CIBloom
+        case CIComicEffect
+    //    case CIConvolution3X3
+    //    case CIConvolution5X5
+    //    case CIConvolution7X7
+    //    case CIConvolution9Horizontal
+    //    case CIConvolution9Vertical
+        case CICrystallize
+        case CIDepthOfField
+        case CIEdges
+        case CIEdgeWork
+        case CIGloom
+        case CIHeightFieldFromMask
+        case CIHexagonalPixellate
+        case CIHighlightShadowAdjust
+        case CILineOverlay
+        case CIPixellate
+        case CIPointillize
+    //    case CIShadedMaterial
+    //    case CISpotColor
+        case CISpotLight
+        // inputTransform CGAffineTransform: {{1, 0, 0, 1}, {0, 0}}
+    //    case CIAffineClamp
+    //    case CIAffineTile
+        case CIEightfoldReflectedTile
+        case CIFourfoldReflectedTile
+        case CIFourfoldRotatedTile
+        case CIFourfoldTranslatedTile
+        case CIGlideReflectedTile
+        case CIKaleidoscope
+        case CIOpTile
+        case CIParallelogramTile
+        case CIPerspectiveTile
+        case CISixfoldReflectedTile
+        case CISixfoldRotatedTile
+        case CITriangleKaleidoscope
+        case CITriangleTile
+        case CITwelvefoldReflectedTile
+        // mix2image
+    //    case CIAccordionFoldTransition
+    //    case CIBarsSwipeTransition
+    //    case CICopyMachineTransition
+    //    case CIDisintegrateWithMaskTransition
+    //    case CIDissolveTransition
+    //    case CIFlashTransition
+    //    case CIModTransition
+    //    case CIPageCurlTransition
+    //    case CIPageCurlWithShadowTransition
+    //    case CIRippleTransition
+    //    case CISwipeTransition
 }
 
 enum FilterParameter: String {

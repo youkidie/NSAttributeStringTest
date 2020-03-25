@@ -44,7 +44,6 @@ class VideoFilterTestViewController: UIViewController {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as URL
         let outputPath = documentsDirectory.appendingPathComponent(basename)
         return outputPath
-        
     }
     
     @objc func record(_ sender:UIButton) {
