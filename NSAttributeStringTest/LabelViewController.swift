@@ -337,9 +337,9 @@ class LabelViewController: UIViewController {
             let textAttributes: [NSAttributedString.Key : Any] = [
                 .font: UIFont(fontSet: fontSet, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize),
                 .paragraphStyle : style,
-                .foregroundColor : fontColor.uiColor,
+                .foregroundColor : fontColor.insideColor,
                 .strokeColor : fontColor.insideColor,
-                .strokeWidth : stroke1
+                .strokeWidth : -stroke1
             ]
             let attributedText = NSAttributedString(string: text, attributes: textAttributes)
 
@@ -348,9 +348,9 @@ class LabelViewController: UIViewController {
             let textAttributes2: [NSAttributedString.Key : Any] = [
                 .font: UIFont(fontSet: fontSet, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize),
                 .paragraphStyle : style,
-                .foregroundColor : fontColor.uiColor,
+                .foregroundColor : fontColor.insideColor,
                 .strokeColor : fontColor.uiColor,
-                .strokeWidth : stroke2
+                .strokeWidth : -stroke2
             ]
             let attributedText2 = NSAttributedString(string: text, attributes: textAttributes2)
 

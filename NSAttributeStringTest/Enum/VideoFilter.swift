@@ -159,6 +159,35 @@ enum VideoFilter: Int, CaseIterable {
 //    case CIShadedMaterial
 //    case CISpotColor
     case CISpotLight
+    // inputTransform CGAffineTransform: {{1, 0, 0, 1}, {0, 0}}
+//    case CIAffineClamp
+//    case CIAffineTile
+    case CIEightfoldReflectedTile
+    case CIFourfoldReflectedTile
+    case CIFourfoldRotatedTile
+    case CIFourfoldTranslatedTile
+    case CIGlideReflectedTile
+    case CIKaleidoscope
+    case CIOpTile
+    case CIParallelogramTile
+    case CIPerspectiveTile
+    case CISixfoldReflectedTile
+    case CISixfoldRotatedTile
+    case CITriangleKaleidoscope
+    case CITriangleTile
+    case CITwelvefoldReflectedTile
+    // mix2image
+//    case CIAccordionFoldTransition
+//    case CIBarsSwipeTransition
+//    case CICopyMachineTransition
+//    case CIDisintegrateWithMaskTransition
+//    case CIDissolveTransition
+//    case CIFlashTransition
+//    case CIModTransition
+//    case CIPageCurlTransition
+//    case CIPageCurlWithShadowTransition
+//    case CIRippleTransition
+//    case CISwipeTransition
     
     var valueKeys:[FilterParameter] {
         switch self {
@@ -238,6 +267,17 @@ enum VideoFilter: Int, CaseIterable {
             return [.inputNRNoiseLevel, .inputNRSharpness, .inputEdgeIntensity, .inputThreshold, .inputContrast200]
         case .CISpotLight:
             return [.inputConcentration, .inputBrightness10]
+        case .CIKaleidoscope:
+            return [.inputCount, .inputAngle]
+        case .CIOpTile:
+            return [.inputAngle, .inputScale10, .inputWidth1000]
+        case .CIFourfoldReflectedTile, .CIFourfoldTranslatedTile, .CIParallelogramTile:
+            return [.inputAngle, .inputAcuteAngle, .inputWidth]
+        case .CIFourfoldRotatedTile, .CIGlideReflectedTile, .CISixfoldReflectedTile, .CISixfoldRotatedTile,
+             .CITriangleTile, .CITwelvefoldReflectedTile, .CIEightfoldReflectedTile:
+            return [.inputAngle, .inputWidth]
+        case .CITriangleKaleidoscope:
+            return [.inputSize, .inputDecay, .inputRotation]
         default:
             return []
         }
@@ -248,7 +288,10 @@ enum VideoFilter: Int, CaseIterable {
         case .CIZoomBlur, .CIVignetteEffect, .CIBumpDistortion, .CIBumpDistortionLinear,
              .CICircleSplashDistortion, .CICircularWrap, .CIHoleDistortion, .CILightTunnel,
              .CIPinchDistortion, .CITorusLensDistortion, .CITwirlDistortion, .CIVortexDistortion,
-             .CICMYKHalftone, .CICrystallize, .CIHexagonalPixellate, .CIPixellate, .CIPointillize:
+             .CICMYKHalftone, .CICrystallize, .CIHexagonalPixellate, .CIPixellate, .CIPointillize,
+             .CIEightfoldReflectedTile, .CIFourfoldReflectedTile, .CIFourfoldRotatedTile, .CIFourfoldTranslatedTile,
+             .CIGlideReflectedTile, .CIKaleidoscope, .CIOpTile, .CIParallelogramTile, .CISixfoldReflectedTile,
+             .CISixfoldRotatedTile, .CITriangleTile, .CITwelvefoldReflectedTile:
             return [.inputCenter]
         case .CIColorClamp:
             return [.inputMinComponents, .inputMaxComponents]
@@ -274,10 +317,12 @@ enum VideoFilter: Int, CaseIterable {
             return [.inputPoint0, .inputPoint1]
         case .CIStretchCrop:
             return [.inputSize]
-        case .CIPerspectiveCorrection, .CIPerspectiveTransform:
+        case .CIPerspectiveCorrection, .CIPerspectiveTransform, .CIPerspectiveTile:
             return [.inputTopLeft, .inputTopRight, .inputBottomLeft, .inputBottomRight]
         case .CISpotLight:
             return [.inputColor, .inputLightPosition, .inputLightPointsAt]
+        case .CITriangleKaleidoscope:
+            return [.inputPoint]
         default:
             return []
         }
@@ -464,6 +509,7 @@ enum FilterParameter: String {
     case inputAngle
     case inputAngle3
     case inputAngle30
+    case inputAcuteAngle
     case inputNoiseLevel
     case inputSharpness
     case inputAmount
@@ -481,6 +527,7 @@ enum FilterParameter: String {
     case inputLevels
     case inputFalloff
     case inputScale
+    case inputScale10
     case inputScale100
     case inputStrands
     case inputPeriodicity
@@ -490,6 +537,7 @@ enum FilterParameter: String {
     case inputCenterStretchAmount
     case inputCropAmount
     case inputWidth
+    case inputWidth1000
     case inputGCR
     case inputUCR
     case inputUnsharpMaskRadius
@@ -502,6 +550,9 @@ enum FilterParameter: String {
     case inputThreshold
     case inputContrast200
     case inputConcentration
+    case inputCount
+    case inputDecay
+    case inputSize
     
     var name:String {
         switch self {
@@ -515,12 +566,14 @@ enum FilterParameter: String {
             return "inputSaturation"
         case .inputIntensity10, .inputIntensityMinus:
             return "inputIntensity"
-        case .inputScale100:
+        case .inputScale10, .inputScale100:
             return "inputScale"
         case .inputContrast200:
             return "inputContrast"
         case .inputBrightness10:
             return "inputBrightness"
+        case .inputWidth1000:
+            return "inputWidth"
         default:
             return self.rawValue
         }
@@ -528,7 +581,7 @@ enum FilterParameter: String {
     
     var minimum:NSNumber {
         switch self {
-        case .inputAngle:
+        case .inputAngle, .inputAcuteAngle:
             return -3.141592653589793
         case .inputAngle3:
             return -12.56637061435917
@@ -544,11 +597,11 @@ enum FilterParameter: String {
             return -10
         case .inputPower:
             return 0.25
-        case .inputLevels, .inputScale100, .inputPeriodicity:
+        case .inputLevels, .inputScale100, .inputPeriodicity, .inputCount, .inputWidth1000:
             return 1
         case .inputStrands:
             return -10
-        case .inputZoom:
+        case .inputZoom, .inputScale10:
             return 0.1
         case .inputConcentration:
             return 0.001
@@ -567,11 +620,11 @@ enum FilterParameter: String {
             return 30
         case .inputRadius600:
             return 600
-        case .inputRadius1000:
+        case .inputRadius1000, .inputWidth1000, .inputSize:
             return 1000
         case .inputRadius2000:
             return 2000
-        case .inputAngle:
+        case .inputAngle, .inputAcuteAngle:
             return 3.141592653589793
         case .inputAngle3:
             return 12.56637061435917
@@ -579,26 +632,21 @@ enum FilterParameter: String {
             return 94.24777960769379
         case .inputNoiseLevel:
             return 0.1
-        case .inputAmount200, .inputEdgeIntensity, .inputWidth, .inputContrast200:
+        case .inputAmount200, .inputEdgeIntensity, .inputContrast200, .inputWidth:
             return 200
         case .inputSaturation, .inputNRSharpness:
             return 2
-        case .inputSaturation10, .inputUnsharpMaskRadius, .inputUnsharpMaskIntensity, .inputBrightness10:
+        case .inputSaturation10, .inputUnsharpMaskRadius, .inputUnsharpMaskIntensity, .inputBrightness10, .inputScale10,
+             .inputEV, .inputIntensity10, .inputStrands:
             return 10
         case .inputContrast:
             return 4
-        case .inputEV:
-            return 10
         case .inputPower:
             return 4
-        case .inputIntensity10:
-            return 10
         case .inputLevels:
             return 30
         case .inputScale100:
             return 100
-        case .inputStrands:
-            return 10
         case .inputPeriodicity, .inputZoom, .inputRefraction:
             return 5
         case .inputRotation:
@@ -607,6 +655,8 @@ enum FilterParameter: String {
             return 0.1
         case .inputConcentration:
             return 1.5
+        case .inputCount:
+            return 64
         default:
             return 1
         }
@@ -628,6 +678,7 @@ enum FilterParameterVector: String {
     case inputAlphaCoefficients
     case inputNeutral
     case inputTargetNeutral
+    case inputPoint
     case inputPoint0
     case inputPoint1
     case inputPoint2
@@ -664,8 +715,6 @@ enum FilterParameterVector: String {
     
     var minimum:[NSNumber] {
         switch self {
-        case .inputCenter, .inputInsetPoint0, .inputInsetPoint1, .inputTopLeft, .inputTopRight, .inputBottomLeft, .inputBottomRight:
-            return [0, 0]
         case .inputMinComponents:
             return [0, 0, 0, 0]
         case .inputMaxComponents:
@@ -674,16 +723,10 @@ enum FilterParameterVector: String {
             return [0, 0, 0, 0]
         case .inputRedCoefficients, .inputGreenCoefficients, .inputBlueCoefficients, .inputAlphaCoefficients:
             return [0, 0, 0, 0]
-        case .inputNeutral, .inputTargetNeutral:
-            return [0, 0]
-        case .inputPoint0, .inputPoint1, .inputPoint2, .inputPoint3, .inputPoint4:
-            return [0, 0]
         case .inputColor, .inputColor0, .inputColor1:
             return [0, 0, 0, 0]
         case .inputRedCoefficientsDeca, .inputGreenCoefficientsDeca, .inputBlueCoefficientsDeca:
             return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        case .inputSize:
-            return [0, 0]
         case .inputLightPosition, .inputLightPointsAt:
             return [0, 0, 0]
         default:
@@ -693,7 +736,8 @@ enum FilterParameterVector: String {
     
     var maximum:[NSNumber] {
         switch self {
-        case .inputCenter, .inputInsetPoint0, .inputInsetPoint1, .inputTopLeft, .inputTopRight, .inputBottomLeft, .inputBottomRight:
+        case .inputCenter, .inputInsetPoint0, .inputInsetPoint1, .inputTopLeft, .inputTopRight,
+             .inputBottomLeft, .inputBottomRight, .inputPoint:
             return [1000, 1000]
         case .inputMinComponents:
             return [1, 1, 1, 1]
@@ -705,8 +749,6 @@ enum FilterParameterVector: String {
             return [1, 1, 1, 1]
         case .inputNeutral, .inputTargetNeutral:
             return [6500, 6500]
-        case .inputPoint0, .inputPoint1, .inputPoint2, .inputPoint3, .inputPoint4:
-            return [1, 1]
         case .inputColor, .inputColor0, .inputColor1:
             return [1, 1, 1, 1]
         case .inputRedCoefficientsDeca, .inputGreenCoefficientsDeca, .inputBlueCoefficientsDeca:
@@ -716,7 +758,7 @@ enum FilterParameterVector: String {
         case .inputLightPosition, .inputLightPointsAt:
             return [1000, 1000, 1000]
         default:
-            return [0, 0]
+            return [1, 1]
         }
     }
 }
